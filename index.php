@@ -1,5 +1,12 @@
 <?php
 require_once './script.php';
+$inception = new Movie('Inception', 'Christopher Nolan', 2010, 148);
+$theMatrix = new Movie('The Matrix', 'The Wachowskis', 1999, 136);
+
+var_dump($inception);
+var_dump($inception->getDuration());
+var_dump($theMatrix);
+var_dump($theMatrix->getDuration());
 ?>
 
 <!DOCTYPE html>
