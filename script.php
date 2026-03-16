@@ -1,4 +1,14 @@
 <?php
+class Genre
+{
+    public $name;
+
+    public function __construct($_name)
+    {
+        $this->name = $_name;
+    }
+}
+
 
 class Movie
 {
@@ -6,14 +16,16 @@ class Movie
     public $director;
     public $year;
     public $minutes;
+    public $genre;
 
     // Constructor
-    public function __construct($_title, $_director, $_year, $_minutes)
+    public function __construct($_title, $_director, $_year, $_minutes, Genre $_genre)
     {
         $this->title = $_title;
         $this->director = $_director;
         $this->year = $_year;
         $this->minutes = $_minutes;
+        $this->genre = $_genre;
     }
 
     // Transform minutes in a more readable string
