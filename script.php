@@ -1,4 +1,17 @@
 <?php
+
+trait FilmMakers
+{
+    public $producer;
+    public $filmCompany;
+
+    public function getProductionInfo()
+    {
+        $productionInfo = "{$this->producer} - {$this->filmCompany}";
+        return $productionInfo;
+    }
+}
+
 class Genre
 {
     public $name;
@@ -12,20 +25,21 @@ class Genre
 
 class Movie
 {
+    use FilmMakers;
     public $title;
     public $director;
     public $year;
     public $minutes;
-    public $genre;
+    public $genres;
 
     // Constructor
-    public function __construct($_title, $_director, $_year, $_minutes, Genre $_genre)
+    public function __construct($_title, $_director, $_year, $_minutes, $_genres)
     {
         $this->title = $_title;
         $this->director = $_director;
         $this->year = $_year;
         $this->minutes = $_minutes;
-        $this->genre = $_genre;
+        $this->genres = $_genres;
     }
 
     // Transform minutes in a more readable string
@@ -45,6 +59,4 @@ class Movie
         }
         return $result !== '' ? $result : '0min';
     }
-
-
 }

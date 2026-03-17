@@ -2,14 +2,16 @@
 require_once './script.php';
 
 $sciFi = new Genre("Sci-Fi");
+$action = new Genre("Action");
 
-$inception = new Movie('Inception', 'Christopher Nolan', 2010, 148, $sciFi);
-$theMatrix = new Movie('The Matrix', 'The Wachowskis', 1999, 136, $sciFi);
+$inception = new Movie('Inception', 'Christopher Nolan', 2010, 148, [$sciFi, $action]);
+$theMatrix = new Movie('The Matrix', 'The Wachowskis', 1999, 136, [$sciFi]);
+
+$inception->producer = "Emma Thomas";
+$inception->filmCompany = "Warner Bros";
 
 var_dump($inception);
-echo $inception->getDuration();
-var_dump($theMatrix);
-echo $theMatrix->getDuration();
+echo $inception->getProductionInfo();
 ?>
 
 <!DOCTYPE html>
