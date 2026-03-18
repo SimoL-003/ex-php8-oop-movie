@@ -9,6 +9,14 @@ class Movie
     public $genres;
 
     // Constructor
+    /**
+     * Summary of __construct
+     * @param string $_title
+     * @param string $_director
+     * @param int $_year
+     * @param int $_minutes
+     * @param Genre[] $_genres
+     */
     public function __construct($_title, $_director, $_year, $_minutes, $_genres)
     {
         $this->title = $_title;

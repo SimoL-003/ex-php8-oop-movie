@@ -8,3 +8,6 @@ $moviesArray = [
     $parasite = new Movie('Parasite', 'Bong Joon-ho', 2019, 132, [$drama, $thriller]),
     $gladiator = new Movie('Gladiator', 'Ridley Scott', 2000, 155, [$action, $drama]),
 ];
+
+$inception->producer = "Emma Thomas";
+$inception->filmCompany = "Warner Bros";
