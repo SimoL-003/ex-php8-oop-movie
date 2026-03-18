@@ -35,4 +35,14 @@ class Movie
         }
         return $result !== '' ? $result : '0min';
     }
+
+    // Transform genres array in a string
+    public function getGenresString()
+    {
+        $result = [];
+        foreach ($this->genres as $genre) {
+            array_push($result, $genre->name);
+        }
+        return implode(", ", $result);
+    }
 }
