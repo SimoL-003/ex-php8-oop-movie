@@ -1,14 +1,9 @@
 <?php
 class Genre
 {
-    public $name;
+    public string $name;
 
-    // Constructor
-    /**
-     * Summary of __construct
-     * @param string $_name
-     */
-    public function __construct($_name)
+    public function __construct(string $_name)
     {
         $this->name = $_name;
     }

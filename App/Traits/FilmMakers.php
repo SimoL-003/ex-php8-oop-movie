@@ -1,8 +1,8 @@
 <?php
 trait FilmMakers
 {
-    public $producer;
-    public $filmCompany;
+    public string $producer;
+    public string $filmCompany;
 
     public function getProductionInfo()
     {

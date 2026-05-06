@@ -2,22 +2,13 @@
 class Movie
 {
     use FilmMakers;
-    public $title;
-    public $director;
-    public $year;
-    public $minutes;
-    public $genres;
+    public string $title;
+    public string $director;
+    public int $year;
+    public int $minutes;
+    public array $genres;
 
-    // Constructor
-    /**
-     * Summary of __construct
-     * @param string $_title
-     * @param string $_director
-     * @param int $_year
-     * @param int $_minutes
-     * @param Genre[] $_genres
-     */
-    public function __construct($_title, $_director, $_year, $_minutes, $_genres)
+    public function __construct(string $_title, string $_director, int $_year, int $_minutes, array $_genres)
     {
         $this->title = $_title;
         $this->director = $_director;
@@ -27,7 +18,7 @@ class Movie
     }
 
     // Transform minutes in a more readable string
-    public function getDuration()
+    public function getDuration(): string
     {
         $hours = floor($this->minutes / 60);
         $remainingMinutes = $this->minutes % 60;
@@ -45,7 +36,7 @@ class Movie
     }
 
     // Transform genres array in a string
-    public function getGenresString()
+    public function getGenresString(): string
     {
         $result = [];
         foreach ($this->genres as $genre) {
